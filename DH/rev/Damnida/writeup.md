@@ -1,6 +1,6 @@
 # Damnida — Write-up
 
-**Category:** Reversing · **Flag:** `DH{NoM0reBytec0des}`
+**Category:** Reversing · **Flag:** `DH{...}`
 
 > Dreami studied obfuscation and built the **Damnida** obfuscator. Analyse a binary obfuscated with it and recover the flag.
 
