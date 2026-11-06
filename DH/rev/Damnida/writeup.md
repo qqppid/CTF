@@ -368,15 +368,15 @@ def invert(v0, v1):
 target = (0xb902e3961384adfc, 0x8ed17998a64fe48c)
 v = invert(*target)
 assert process(*v) == target
-print(struct.pack('<QQ', *v))   # b'NoM0reBytec0des\x00'
+print(struct.pack('<QQ', *v))   # b'...\x00'
 ```
 
 The 16th byte is NUL, which is what `strchrnul` writes over the newline, so typing the 15 characters and Enter produces exactly this block.
 
 ```
-$ echo NoM0reBytec0des | ./damnida
+$ echo ... | ./damnida
 Input : Correct !
-DH{NoM0reBytec0des}
+DH{...}
 ```
 
 **Flag: `DH{...}`** — "no more bytecodes", which fits: Damnida has no bytecode at all, only a chain of native handlers.
